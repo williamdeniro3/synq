@@ -22,6 +22,48 @@ class ChatGPT {
         console.log(completion.data.choices[0].message);
 
     }
+
+    async getCoverLetter(resume, jobDescription) {
+        const configuration = new Configuration({
+            apiKey: this.apiKey,
+        });
+        const openai = new OpenAIApi(configuration);
+
+        const completion = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [{role: "system", content: "Can you help write me a cover letter to the specific job description. I want you to provide me with a tailor cover letter that highlight my most relevant skills and experiences for the position."
+            + "Here is the resume \n" + resume + "\n Here is the Job Description \n" + jobDescription
+    
+    }],
+        });
+        console.log(completion.data.choices[0].message);
+
+    }
+
+
+    async getRecruiterEmail(resume, jobDescription) {
+        const configuration = new Configuration({
+            apiKey: this.apiKey,
+        });
+        const openai = new OpenAIApi(configuration);
+
+        const completion = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [{role: "system", content: "Can you help write me an email to the recuiter at the company for specific job description. I want you to provide me with a tailor cover letter that highlight my most relevant skills and experiences for the position."
+            + "Here is the resume \n" + resume + "\n Here is the Job Description \n" + jobDescription
+    
+    }],
+        });
+        console.log(completion.data.choices[0].message);
+
+    }
+
+
+    
+
+
+
+
 }
 
 export default ChatGPT;

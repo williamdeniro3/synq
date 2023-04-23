@@ -7,7 +7,7 @@ function AnalysisComponent() {
   async function handleSubmit(event) {
     event.preventDefault();
     const chatbot = new ChatGPT();
-    const response = await chatbot.getTailoredBulletPoints(process.env.REACT_APP_DUMMY_RESUME, process.env.REACT_APP_DUMMY_JOB_APPLICATION);
+    const response = await chatbot.getRecruiterEmail(process.env.REACT_APP_DUMMY_RESUME, process.env.REACT_APP_DUMMY_JOB_APPLICATION);
     setResponse(response);
   }
 
