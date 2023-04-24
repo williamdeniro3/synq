@@ -47,13 +47,17 @@ class ChatGPT {
         const openai = new OpenAIApi(configuration);
 
         const completion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [{role: "system", content: "Can you help write me an email to the recuiter at the company for specific job description. I want you to provide me with a tailor cover letter that highlight my most relevant skills and experiences for the position."
-            + "Here is the resume \n" + resume + "\n Here is the Job Description \n" + jobDescription
-    
-    }],
+            model: "gpt-3.5-turbo",
+            messages: [{
+                role: "system",
+                content: "Can you help write me an email to the recuiter at the company for specific job description. I want you to provide me with a tailor cover letter that highlight my most relevant skills and experiences for the position."
+                    + "Here is the resume \n" + resume + "\n Here is the Job Description \n" + jobDescription
+
+            }],
         });
         console.log(completion.data.choices[0].message);
+
+    }
 
     async getLinkedInSummary(resume) {
         const configuration = new Configuration({
