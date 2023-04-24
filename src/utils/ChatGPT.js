@@ -40,7 +40,6 @@ class ChatGPT {
 
     }
 
-
     async getRecruiterEmail(resume, jobDescription) {
         const configuration = new Configuration({
             apiKey: this.apiKey,
@@ -56,13 +55,22 @@ class ChatGPT {
         });
         console.log(completion.data.choices[0].message);
 
+    async getLinkedInSummary(resume) {
+        const configuration = new Configuration({
+            apiKey: this.apiKey,
+        });
+        const openai = new OpenAIApi(configuration);
+
+        const completion = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [{role: "system", content: "Can you help write me a LinkedIn about me section that highlights my skills and experiences."
+                    + "Here is the resume \n" + resume
+
+            }],
+        });
+        console.log(completion.data.choices[0].message);
+
     }
-
-
-    
-
-
-
 
 }
 
