@@ -12,11 +12,16 @@ function AnalysisComponent() {
   }
 
   return (
-        //Connor put the text fields inbetween the opening Form tag and the
     <div>
       <form onSubmit={handleSubmit}>
-
-        <button className='btn btn-primary'>Get Response</button>
+        <div class="row d-flex align-items-center">
+          <div class="col-sm-8 pr-sm-1">
+            <textarea class="form-control-lg" rows="10" placeholder='Resume Detail'></textarea>
+          </div>
+          <div class="col-sm-4 pl-sm-1">
+            <button class='btn btn-primary btn-block'>Get Response</button>
+          </div>
+        </div>
       </form>
       {response && <p>{response}</p>}
     </div>
