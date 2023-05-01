@@ -14,13 +14,21 @@ function AnalysisComponent() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div class="row d-flex align-items-center">
-          <div class="col-sm-6 pr-sm-1">
-            <textarea class="form-control-lg" rows="10" placeholder='Resume Detail'></textarea>
-            <textarea class="form-control-lg" rows="10" placeholder='Job Description'></textarea>
-          </div>
-          <div class="col-sm-4 pl-sm-1">
-            <button class='btn btn-primary btn-block'>Get Response</button>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Resume</label>
+                <textarea class="form-control-lg" id="resume_area" rows="10" placeholder='Copy and paste your resume Here.'></textarea>
+              </div>
+              <div class="form-group">
+                <label>Job Description</label>
+                <textarea class="form-control-lg" id="jd_area" rows="10" placeholder='Copy and paste the job description you are applying for here.'></textarea>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+              <button class='btn btn-primary'>Get Response</button>
+            </div>
           </div>
         </div>
       </form>
