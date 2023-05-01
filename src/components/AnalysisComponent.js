@@ -15,8 +15,9 @@ function AnalysisComponent() {
     <div>
       <form onSubmit={handleSubmit}>
         <div class="row d-flex align-items-center">
-          <div class="col-sm-8 pr-sm-1">
+          <div class="col-sm-6 pr-sm-1">
             <textarea class="form-control-lg" rows="10" placeholder='Resume Detail'></textarea>
+            <textarea class="form-control-lg" rows="10" placeholder='Job Description'></textarea>
           </div>
           <div class="col-sm-4 pl-sm-1">
             <button class='btn btn-primary btn-block'>Get Response</button>
