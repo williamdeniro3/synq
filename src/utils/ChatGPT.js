@@ -56,6 +56,7 @@ class ChatGPT {
             }],
         });
         console.log(completion.data.choices[0].message);
+        return completion.data.choices[0].message.content
 
     }
 
