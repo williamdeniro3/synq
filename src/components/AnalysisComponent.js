@@ -35,15 +35,15 @@ function AnalysisComponent() {
         <div class="container">
           <div class="row">
             <div class="col-md-5">
-              <FormGroup className="form-group-lg">
+              <FormGroup className="form-group-lg" style={{ height: '800px' }} >
                 <Label for="exampleText">Resume</Label>
-                <Input type="textarea"  name="text" id="exampleText" />
+                <Input type="textarea"  name="text" rows="20"  />
               </FormGroup>
             </div>
             <div class="col-md-5">
             <FormGroup>
                 <Label for="exampleText">Job Description</Label>
-                <Input type="textarea" name="text" id="exampleText" />
+                <Input type="textarea" name="text" rows="20" id="exampleText" />
               </FormGroup>
             </div>
             <div class="col-md-2 mt-5">

@@ -35,6 +35,7 @@ import NucleoIcons from "views/IndexSections/NucleoIcons.js";
 import Signup from "views/IndexSections/Signup.js";
 import Examples from "views/IndexSections/Examples.js";
 import Download from "views/IndexSections/Download.js";
+import { Button } from "reactstrap";
 
 export default function Index() {
   React.useEffect(() => {
@@ -51,19 +52,7 @@ export default function Index() {
         <PageHeader />
         <div className="main">
         <AnalysisComponent/>
-          <Basics />
-          <Navbars />
-          <Tabs />
-          <Pagination />
-          <Notifications />
-          <Typography />
-          <JavaScript />
-          <NucleoIcons />
-          <Signup />
-          <Examples />
-          <Download />
         </div>
-        <Footer />
       </div>
     </>
   );
