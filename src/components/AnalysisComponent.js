@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import ChatGPT from '../utils/ChatGPT';
+import ChatGPT  from '../utils/ChatGPT';
+
+import {
+  FormGroup,
+  Label,
+  Input,
+
+} from "reactstrap";
 
 function AnalysisComponent() {
   const [response, setResponse] = useState('');
@@ -13,32 +20,31 @@ function AnalysisComponent() {
        response = await chatbot.getLinkedInSummary(process.env.REACT_APP_DUMMY_RESUME, process.env.REACT_APP_DUMMY_JOB_APPLICATION);
     }else if(type ==='resumeBullets'){
        response = await chatbot.getTailoredBulletPoints(process.env.REACT_APP_DUMMY_RESUME, process.env.REACT_APP_DUMMY_JOB_APPLICATION);
-    }
+        console.log('got the response')
+      }
     else if (type === 'coverLetter'){
        response = await chatbot.getCoverLetter(process.env.REACT_APP_DUMMY_RESUME, process.env.REACT_APP_DUMMY_JOB_APPLICATION);
     }
-    
-    
       setResponse(response);
 
   }
-
+  
   return (
     <div>
       <form >
         <div class="container">
           <div class="row">
             <div class="col-md-5">
-            <label className='text-white display-5 text-center mb-5'>Resume</label>
-              <div class="form-group">
-                <textarea class="form-control-lg" id="resume_area" rows="10" placeholder='Copy and paste your resume Here.'></textarea>
-              </div>
+              <FormGroup className="form-group-lg">
+                <Label for="exampleText">Resume</Label>
+                <Input type="textarea"  name="text" id="exampleText" />
+              </FormGroup>
             </div>
             <div class="col-md-5">
-                <div class="form-group">
-                    <label className='text-white display-5 mb-5 text-nowrap'>Job Description</label>
-                    <textarea class="form-control-lg" id="jd_area" rows="10" placeholder='Copy and paste the job description you are applying for here.'></textarea>
-                </div>
+            <FormGroup>
+                <Label for="exampleText">Job Description</Label>
+                <Input type="textarea" name="text" id="exampleText" />
+              </FormGroup>
             </div>
             <div class="col-md-2 mt-5">
                 <div class="row">
