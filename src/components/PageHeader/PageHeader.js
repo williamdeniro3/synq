@@ -1,15 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Container, Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 export default function PageHeader() {
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight / 2.5,
-      behavior: 'smooth',
-    });
-  };
-
-
 
   return (
     <div className="page-header header-filter">
@@ -26,11 +19,14 @@ export default function PageHeader() {
           <h3 className="d-none d-sm-block">
             Your Resume, Perfected.
           </h3>
-          <Button color="primary" onClick={scrollToBottom}>
-            Enter
-          </Button>
+          <Link to="/analysis">
+            <Button color="primary" >
+              Start          
+            </Button>
+          </Link>
         </div>
       </Container>
     </div>
   );
-}
+
+};
