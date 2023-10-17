@@ -15,9 +15,9 @@ export default function PageHeader() {
       <div className="squares square7" />
       <Container>
         <div className="content-center brand">
-          <h1 className="h1-seo">Welcome to SYNQ</h1>
+          <h1 className="h1-seo">Welcome to SYNQ<h5>(BETA)</h5></h1>
           <h3 className="d-none d-sm-block">
-            Your Resume, Perfected.
+            Your Resume, Perfected. 
           </h3>
           <Link to="/analysis">
             <Button color="primary" >
