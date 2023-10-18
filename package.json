@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/creativetimofficial/blk-design-system-react.git"
   },
+  "engines": {
+    "node": "16.17"  
+  },
   "bugs": {
     "url": "https://github.com/creativetimofficial/blk-design-system-react/issues"
   },
