@@ -14,7 +14,7 @@ class ChatGPT {
         const completion = await openai.chat.completions.create({
         
         model: "gpt-3.5-turbo",
-        messages: [{role: "user", content: "Please analyze the attached resume and job description, rank which bullet points in my resuem are most reveland to the job description and excplicitly say why for example (Relevant to the job description's requirement of ...blank) then please give me examples of new brand new orginal bullet points to add, do not reuse bullet points from the resume come up with new ones" + "resume = " +  resume + "\n" + "job description = " + jobDescription
+        messages: [{role: "user", content: "Please analyze the attached resume and job description, rank which bullet points in my resume are most relevant to the job description and excplicitly say why for example (Relevant to the job description's requirement of ...blank) then please give me examples of new brand new orginal bullet points to add, for this section do not reuse bullet points from the resume come up with new ones" + "resume = " +  resume + "\n" + "job description = " + jobDescription
     
     }],
         });
